@@ -4,9 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Одзаяа | Чиний ирээдүй</title>
+<title>ODZAYA — The Next Chapter</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,95 +16,204 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #10172a, #243b55);
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background: #090b10;
+    color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #345b91;
+    filter: blur(180px);
+    opacity: .16;
+    top: -200px;
+    right: -100px;
+    pointer-events: none;
 }
 
 .container {
-    max-width: 750px;
-    width: 100%;
-    text-align: center;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 25px;
-    padding: 45px 30px;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 25px;
 }
 
-.tag {
-    color: #f6c96b;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #252832;
+}
+
+.logo {
+    font-weight: 900;
     letter-spacing: 4px;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-    color: #f6d58a;
-}
-
-.subtitle {
-    color: #d4deec;
     font-size: 17px;
-    margin-bottom: 35px;
 }
 
-.quote {
-    font-size: 23px;
-    font-weight: bold;
-    line-height: 1.6;
+.nav-text {
+    color: #777e8c;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 0 65px;
+}
+
+.eyebrow {
+    color: #8caedc;
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 700;
     margin-bottom: 25px;
 }
 
-.message {
-    color: #d5dfec;
+h1 {
+    font-size: clamp(65px, 13vw, 145px);
+    font-weight: 900;
+    letter-spacing: -8px;
+    line-height: .95;
+}
+
+h1 span {
+    color: #7da4d7;
+}
+
+.hero-description {
+    max-width: 470px;
+    margin-top: 30px;
+    color: #9299a7;
+    font-size: 15px;
     line-height: 1.9;
-    font-size: 16px;
-    margin-bottom: 30px;
 }
 
-.highlight {
-    color: #f6d58a;
-    font-weight: bold;
-}
-
-button {
-    background: #f6c96b;
-    color: #172238;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-    background: #ffe09a;
-}
-
-#inspiration {
-    margin-top: 25px;
-    color: #f6d58a;
-    font-size: 18px;
-    line-height: 1.6;
-    min-height: 55px;
-}
-
-.footer {
+.line {
+    width: 65px;
+    height: 3px;
+    background: #7da4d7;
     margin-top: 35px;
-    color: #94a6bd;
+}
+
+.section {
+    margin-top: 55px;
+}
+
+.section-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #7da4d7;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.quote-box {
+    background: linear-gradient(120deg, #151c29, #10131b);
+    border: 1px solid #293344;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.quote {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+.quote span {
+    color: #7da4d7;
+}
+
+.quote-sub {
+    margin-top: 18px;
+    color: #858e9d;
     font-size: 13px;
+    line-height: 1.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #11141c;
+    border: 1px solid #242936;
+    padding: 25px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #6f96ca;
+}
+
+.number {
+    color: #7da4d7;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #89909d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.final {
+    text-align: center;
+    margin: 100px 0 50px;
+}
+
+.final h2 {
+    font-size: clamp(30px, 6vw, 55px);
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.final h2 span {
+    color: #7da4d7;
+}
+
+.final p {
+    color: #858d9b;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+footer {
+    border-top: 1px solid #252832;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #636b79;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@media(max-width:650px) {
+    h1 { letter-spacing: -4px; }
+    .grid { grid-template-columns: 1fr; }
+    .quote-box { padding: 25px; }
+    footer { gap: 15px; flex-wrap: wrap; }
 }
 </style>
 </head>
@@ -111,68 +222,88 @@ button:hover {
 
 <div class="container">
 
-    <div class="tag">✦ ИРЭЭДҮЙН ЭЗЭН ✦</div>
+<nav>
+    <div class="logo">O.</div>
+    <div class="nav-text">PERSONAL DEVELOPMENT / 2026</div>
+</nav>
 
-    <h1>Одзаяа</h1>
+<section class="hero">
+    <div class="eyebrow">A NEW STANDARD OF THINKING</div>
 
-    <p class="subtitle">
-        Чиний мөрөөдөл чиний хичээл зүтгэлээс эхэлнэ.
+    <h1>OD<span>ZAYA.</span></h1>
+
+    <p class="hero-description">
+        Ирээдүйг хүлээх биш, өөрөө бүтээ.
+        Өдөр бүр өөрийнхөө мэдлэг, чадвар,
+        боломжийн хүрээг тэл.
+        Чиний хамгийн том өрсөлдөгч бол өчигдрийн чи.
     </p>
 
-    <div class="quote">
-        "Өнөөдрийн хичээл зүтгэл<br>
-        маргаашийн амжилтыг бүтээнэ."
+    <div class="line"></div>
+</section>
+
+<section class="section">
+    <div class="section-title">01 / THE MINDSET</div>
+
+    <div class="quote-box">
+        <div class="quote">
+            "Авьяас чамайг эхлүүлнэ.
+            <span>Сахилга бат чамайг оргилд хүргэнэ.</span>"
+        </div>
+
+        <div class="quote-sub">
+            Том зорилго жижиг, тогтмол үйлдлүүдээс эхэлдэг.
+            Үр дүнгээс илүү үйл явцдаа анхаар.
+        </div>
     </div>
+</section>
 
-    <p class="message">
-        Одзаяа, чи өөрийнхөө бодож байгаагаас ч илүү
-        их боломж, хүч чадалтай хүн.<br><br>
+<section class="section">
+    <div class="section-title">02 / THE PRINCIPLES</div>
 
-        Зарим өдөр хэцүү байна.
-        Заримдаа бүх зүйл бүтэхгүй мэт санагдана.
-        Гэхдээ <span class="highlight">бууж өгөхгүй байх</span>
-        нь өөрөө том ялалт юм.<br><br>
+    <div class="grid">
 
-        Бусадтай өөрийгөө бүү харьцуул.
-        Өчигдрийн өөрөөсөө өнөөдөр илүү байхад л хангалттай.
-        Алдаа бүрээс суралцаж, алхам бүрээрээ урагшил.
-        <br><br>
+        <div class="card">
+            <div class="number">01 — DISCIPLINE</div>
+            <h3>Сахилга бат</h3>
+            <p>
+                Хүсэл төрөхийг хүлээх хэрэггүй.
+                Хийх ёстой зүйлээ хий.
+            </p>
+        </div>
 
-        Нэг л өдөр чи өнөөдрийн өөрөөрөө бахархах болно.
-    </p>
+        <div class="card">
+            <div class="number">02 — KNOWLEDGE</div>
+            <h3>Мэдлэг</h3>
+            <p>
+                Өдөр бүр шинэ зүйл сур.
+                Мэдлэг бол өөртөө хийж буй хөрөнгө оруулалт.
+            </p>
+        </div>
 
-    <button onclick="newQuote()">
-        Надад урам зориг өг ✨
-    </button>
+        <div class="card">
+            <div class="number">03 — CONSISTENCY</div>
+            <h3>Тууштай байдал</h3>
+            <p>
+                Нэг өдөр ихийг хийхээс илүү
+                өдөр бүр бага багаар урагшил.
+            </p>
+        </div>
 
-    <div id="inspiration">
-        Чи чадна. Өөртөө итгээрэй!
     </div>
+</section>
 
-    <div class="footer">
-        ✦ Одзаяагийн амжилтын зам эндээс эхэлнэ ✦
-    </div>
+<section class="final">
+    <h2>NO EXCUSES.<br><span>JUST PROGRESS.</span></h2>
+    <p>Одзаяа — Чиний түүх одоо л бичигдэж байна.</p>
+</section>
+
+<footer>
+    <span>ODZAYA © 2026</span>
+    <span>FOCUS. LEARN. EVOLVE.</span>
+</footer>
 
 </div>
 
-<script>
-const quotes = [
-    "Мөрөөдөлдөө хүрэхийн тулд эхлээд өөртөө итгэ.",
-    "Амжилт гэдэг нэг өдрийн үр дүн биш, өдөр бүрийн хичээл зүтгэл юм.",
-    "Удаан байсан ч хамаагүй, зогсохгүй урагшил.",
-    "Чиний ирээдүй өнөөдрийн сонголтоос хамаарна.",
-    "Өөрийгөө дутуу үнэлэх хэрэггүй. Чи чадна!",
-    "Бэрхшээл бүрийн цаана шинэ боломж байдаг.",
-    "Өнөөдөр эхэл. Төгс байх албагүй, хичээхэд л болно."
-];
-
-function newQuote() {
-    const random = Math.floor(Math.random() * quotes.length);
-    document.getElementById("inspiration").innerText =
-        quotes[random];
-}
-</script>
-
 </body>
 </html>
-
