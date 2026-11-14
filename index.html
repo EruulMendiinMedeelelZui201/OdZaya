@@ -1,1 +1,178 @@
 
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Одзаяа | Чиний ирээдүй</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #10172a, #243b55);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    padding: 45px 30px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.tag {
+    color: #f6c96b;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #f6d58a;
+}
+
+.subtitle {
+    color: #d4deec;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.quote {
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.message {
+    color: #d5dfec;
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #f6d58a;
+    font-weight: bold;
+}
+
+button {
+    background: #f6c96b;
+    color: #172238;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ffe09a;
+}
+
+#inspiration {
+    margin-top: 25px;
+    color: #f6d58a;
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 55px;
+}
+
+.footer {
+    margin-top: 35px;
+    color: #94a6bd;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="tag">✦ ИРЭЭДҮЙН ЭЗЭН ✦</div>
+
+    <h1>Одзаяа</h1>
+
+    <p class="subtitle">
+        Чиний мөрөөдөл чиний хичээл зүтгэлээс эхэлнэ.
+    </p>
+
+    <div class="quote">
+        "Өнөөдрийн хичээл зүтгэл<br>
+        маргаашийн амжилтыг бүтээнэ."
+    </div>
+
+    <p class="message">
+        Одзаяа, чи өөрийнхөө бодож байгаагаас ч илүү
+        их боломж, хүч чадалтай хүн.<br><br>
+
+        Зарим өдөр хэцүү байна.
+        Заримдаа бүх зүйл бүтэхгүй мэт санагдана.
+        Гэхдээ <span class="highlight">бууж өгөхгүй байх</span>
+        нь өөрөө том ялалт юм.<br><br>
+
+        Бусадтай өөрийгөө бүү харьцуул.
+        Өчигдрийн өөрөөсөө өнөөдөр илүү байхад л хангалттай.
+        Алдаа бүрээс суралцаж, алхам бүрээрээ урагшил.
+        <br><br>
+
+        Нэг л өдөр чи өнөөдрийн өөрөөрөө бахархах болно.
+    </p>
+
+    <button onclick="newQuote()">
+        Надад урам зориг өг ✨
+    </button>
+
+    <div id="inspiration">
+        Чи чадна. Өөртөө итгээрэй!
+    </div>
+
+    <div class="footer">
+        ✦ Одзаяагийн амжилтын зам эндээс эхэлнэ ✦
+    </div>
+
+</div>
+
+<script>
+const quotes = [
+    "Мөрөөдөлдөө хүрэхийн тулд эхлээд өөртөө итгэ.",
+    "Амжилт гэдэг нэг өдрийн үр дүн биш, өдөр бүрийн хичээл зүтгэл юм.",
+    "Удаан байсан ч хамаагүй, зогсохгүй урагшил.",
+    "Чиний ирээдүй өнөөдрийн сонголтоос хамаарна.",
+    "Өөрийгөө дутуу үнэлэх хэрэггүй. Чи чадна!",
+    "Бэрхшээл бүрийн цаана шинэ боломж байдаг.",
+    "Өнөөдөр эхэл. Төгс байх албагүй, хичээхэд л болно."
+];
+
+function newQuote() {
+    const random = Math.floor(Math.random() * quotes.length);
+    document.getElementById("inspiration").innerText =
+        quotes[random];
+}
+</script>
+
+</body>
+</html>
+
